@@ -1,18 +1,355 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Randall West</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randall West | Principal Software Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --card-hover:#334155;
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+    --accent:#38bdf8;
+    --accent2:#22c55e;
+    --border:#334155;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 24px;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:100px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:var(--accent);
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:800px;
+    font-size:1.15rem;
+    color:var(--muted);
+}
+
+.button-row{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#000;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    border:1px solid var(--border);
+    color:var(--text);
+}
+
+.btn-secondary:hover{
+    background:var(--card-hover);
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    gap:25px;
+}
+
+.grid-3{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:25px;
+    transition:.2s;
+}
+
+.card:hover{
+    background:var(--card-hover);
+    transform:translateY(-3px);
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    background:#1e293b;
+    border:1px solid var(--border);
+    padding:10px 16px;
+    border-radius:999px;
+    font-size:.95rem;
+}
+
+.timeline{
+    display:grid;
+    gap:20px;
+}
+
+.timeline-item{
+    border-left:4px solid var(--accent);
+    padding-left:20px;
+}
+
+.timeline-item h3{
+    margin-bottom:5px;
+}
+
+.timeline-item span{
+    color:var(--accent);
+    font-size:.9rem;
+}
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:40px 0;
+    color:var(--muted);
+}
+
+.highlight{
+    color:var(--accent2);
+    font-weight:600;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Randall West</h1>
-    <p>Principal Software Engineer</p>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>Ref Ledger - Sports officiating revenue and expense tracking</li>
-    </ul>
+<header>
+    <div class="container hero">
+        <h1>Randall West</h1>
+        <h2>Principal Software Engineer</h2>
 
-    <h2>Resume</h2>
-    <p>Coming soon.</p>
+        <p>
+            Software engineer with over two decades of experience building
+            large-scale telecommunications and broadband access systems.
+            Experienced in distributed systems, Linux development,
+            networking, Go, C++, MongoDB, virtualization, automation,
+            and production-scale software deployed to millions of users.
+        </p>
+
+        <div class="button-row">
+            <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
+            <a href="https://github.com/gablue316-rw" class="btn btn-secondary">GitHub Profile</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Professional Summary</h2>
+
+        <div class="card">
+            <p>
+                Principal-level engineer specializing in carrier-grade software,
+                backend systems, Linux platforms, networking technologies,
+                and operational excellence. Proven record delivering systems
+                supporting <span class="highlight">100+ deployments</span> and
+                <span class="highlight">millions of subscribers</span> worldwide.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Core Technologies</h2>
+
+        <div class="skills">
+            <div class="skill">Go</div>
+            <div class="skill">C++</div>
+            <div class="skill">Python</div>
+            <div class="skill">Linux</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Docker</div>
+            <div class="skill">Kubernetes</div>
+            <div class="skill">REST APIs</div>
+            <div class="skill">Networking</div>
+            <div class="skill">VMware</div>
+            <div class="skill">Git</div>
+            <div class="skill">Cloud Infrastructure</div>
+            <div class="skill">Distributed Systems</div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="grid grid-3">
+
+            <div class="card">
+                <h3>Ref Ledger</h3>
+                <p>
+                    Full-stack web application developed in Go and MongoDB
+                    for sports officials to track assignments, revenue,
+                    expenses, payments, and reporting.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Broadband Access Platforms</h3>
+                <p>
+                    Designed and developed software for broadband headend
+                    equipment integrating voice, video, and data services
+                    in large-scale carrier deployments.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Infrastructure Automation</h3>
+                <p>
+                    Automated VMware administration and maintenance tasks
+                    across multi-VM environments using PowerShell and
+                    PowerCLI tooling.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Career Highlights</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Principal Software Engineer</h3>
+                <span>COMMSCOPE • 2019–2026</span>
+                <p>
+                    Delivered carrier-grade broadband software solutions,
+                    production debugging, scalability improvements, and
+                    cross-functional technical leadership.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Senior Software Engineer</h3>
+                <span>ARRIS Group • 1997–2019</span>
+                <p>
+                    Developed embedded systems and broadband infrastructure
+                    software supporting large-scale service provider networks.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Patent</h2>
+
+        <div class="card">
+            <h3>U.S. Patent #7,574,345</h3>
+            <p>
+                Developed a broadband scalability testing application used
+                to validate large-scale network deployments and system
+                performance characteristics.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="card">
+            <p>Email: your-email@example.com</p>
+            <p>GitHub: github.com/gablue316-rw</p>
+            <p>LinkedIn: Add your LinkedIn profile URL</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        © 2026 Randall West • Principal Software Engineer
+    </div>
+</footer>
+
 </body>
 </html>
